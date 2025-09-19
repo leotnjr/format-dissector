@@ -9,3 +9,5 @@ Experiment with raw data and have a solid foundation in how computers read and d
 This repository is experimental; code and structures are prototypes and may change.
 
 See /wip for prototypes and experiments
+
+License: MIT (see LICENSE file)
