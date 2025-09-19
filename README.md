@@ -1,4 +1,4 @@
-# format-to-bytes
+# format-dissector
 Project overview
 Experiments dissecting image file formats in C, exploring headers, pixels, and byte-level structures.
 
