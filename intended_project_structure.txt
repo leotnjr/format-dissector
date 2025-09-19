@@ -3,8 +3,8 @@ format-to-bytes/
 ├── wip/                 # Things that are being worked on at the moment.
 │
 ├── main/
-│   └── main.c           # Entry point
-│                         # Responsibilities:
+│   ├── main.c           # Entry point
+│   └── file_id.c/h        # Responsibilities:
 │                         # - Open input file
 │                         # - Identify file type
 │                         # - Select output format
