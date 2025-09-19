@@ -1,0 +1,36 @@
+format-to-bytes/
+│
+├── wip/                 # Things that are being worked on at the moment.
+│
+├── main/
+│   └── main.c           # Entry point
+│                         # Responsibilities:
+│                         # - Open input file
+│                         # - Identify file type
+│                         # - Select output format
+│                         # - Call parsing, processing, and writing modules
+│
+├── parser/    
+│   ├── bmp_parser.c/h    # Parse BMP headers and pixel data
+│   ├── png_parser.c/h    # Parse PNG headers and pixel data
+│   └── image_data_parser.h  # Defines internal image struct. e.g., width, height, RGB buffer
+│                          
+│
+├── writer/            # creates headers and formats
+│   ├── bmp_writer.c/h    # Write BMP files from image_parser
+│   ├── png_writer.c/h    # Write PNG files from image_parser
+│   └── writer_utils.h    # Padding, row calculation, color channel helpers
+│
+├── transform/        # FAR FUTURE
+│   ├── transform.c/h     # Functions to manipulate pixels in memory
+│   │                       (invert, swap channels, scale, etc.)
+│   └── transform_utils.h # Helpers for processing (row/column mapping)
+│
+├── utils/            # FAR FUTURE
+│   ├── file_utils.c/h    # Open, close, read chunks, temp file management
+│   ├── memory_utils.c/h  # Allocation helpers, chunked reading for low-RAM
+│   └── log_utils.c/h     # Optional: logging / debugging / hex dumps
+│
+└── tests/            # After finishing main, one parser, and one writer.
+    ├── test_images/      # 2x2 checkerboards, small images in multiple formats
+    └── test_runner.c     # High-level test routines
