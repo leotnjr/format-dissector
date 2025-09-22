@@ -8,20 +8,31 @@ struct bmp
     struct header // 14 bytes.
     {
         unsigned char signature[2]; // 2 bytes
-        uint32_t file_size;         // 4 bytes
-        uint32_t reserved_bytes;    // 4 bytes
-        uint32_t content_address;   // 4 bytes
+        uint32_t fileSize;          // 4 bytes
+        uint32_t reservedBytes;     // 4 bytes
+        uint32_t arrayAddress;      // 4 bytes
     };
 
     // Contains specific file information.
-    struct info_header  // 40 bytes
+    struct infoHeader  // 40 bytes
     {
-        uint32_t size;          // 4 bytes
-        int32_t width;          // 4 bytes
-        int32_t height;         // 4 bytes
-        uint16_t color_planes;  // 2 bytes
-        uint32_t compression;   // 4 bytes
-        
+        uint32_t size;              // 4 bytes
+        int32_t imgWidth;           // 4 bytes
+        int32_t imgHeight;          // 4 bytes
+        uint16_t colorPlanes;       // 2 bytes
+        uint16_t bitPerPixel;       // 2 bytes
+        uint32_t compression;       // 4 bytes
+        uint32_t imgSize;           // 4 bytes
+        int32_t horizontalRes;      // 4 bytes
+        int32_t verticalRes;        // 4 bytes
+        uint32_t colorsInTable;     // 4 bytes
+        uint32_t importantColors;   // 4 bytes
+    };
+
+    // Image pixel array
+    struct pixelArray
+    {
+        char test;
     };
 };
 
@@ -39,9 +50,7 @@ int main()
     }
 
     unsigned char buffer[500];
-    size_t file_size = fread(buffer, 2, 2, img);
+    size_t fileSize = fread(buffer, 2, 2, img);
 
-    printf("File was opened!\nFile size: %zu\n\n", file_size);
-
-
+    printf("File was opened!\nFile size: %zu\n\n", fileSize);
 }
