@@ -30,7 +30,7 @@ struct infoHeader  // 40 bytes
 
 void bmp_ArrayAllocation()
 {
-
+    
 }
 
 

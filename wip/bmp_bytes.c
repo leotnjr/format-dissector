@@ -21,7 +21,7 @@ int main()
     unsigned char buffer[500]; //max file size for now.
     size_t file_size = fread(buffer, 1, 500, img);
 
-    printf("read bytes: %zu\n\n", file_size);
+    printf("\nread bytes: %zu\n\n", file_size);
 
     //Shows which byte index have the contents of the image matrix  
     int address = buffer[10];
