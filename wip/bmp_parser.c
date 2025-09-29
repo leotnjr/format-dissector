@@ -28,10 +28,6 @@ struct infoHeader  // 40 bytes
     uint32_t importantColors;   // 4 bytes
 };
 
-void bmp_ArrayAllocation()
-{
-    
-}
 
 
 FILE *img;

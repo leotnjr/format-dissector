@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdint.h>
+#include<string.h>
 
 /*
 This is my first attempt to understand bitmap format byte structure.
@@ -35,7 +36,16 @@ int main()
     unsigned char signature[3];
     fread(signature, 1, 2, img);
     signature[2] = '\0';
-    printf("\n\n\nThe signature is: %s.\n\n", signature);
+    
+    if (strcmp(signature, "BM\0") == 0)
+    {
+        printf("The file has bitmap signature!\n");
+    }
+    else
+    {
+        printf("Signature doesnt match BMP.\n\nExiting\n");
+        exit(0);
+    }
     
     getchar();
     
