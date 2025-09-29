@@ -1,0 +1,117 @@
+read bytes: 70
+
+Image starts at byte 54
+
+
+HEADER
+File format:
+Byte 00: 0x42
+Byte:01: 0x4D
+
+File size:
+Byte:02: 0x46
+Byte:03: 0x00
+Byte:04: 0x00
+Byte:05: 0x00
+
+Reserved_A:
+Byte:06: 0x00
+Byte:07: 0x00
+
+Reserved_B:
+Byte:08: 0x00
+Byte:09: 0x00
+
+Starting Address:
+Byte:10: 0x36
+Byte:11: 0x00
+Byte:12: 0x00
+Byte:13: 0x00
+
+BITMAPINFOREADER
+Size:
+Byte:14: 0x28
+Byte:15: 0x00
+Byte:16: 0x00
+Byte:17: 0x00
+
+Width in pixels:
+Byte:18: 0x02
+Byte:19: 0x00
+Byte:20: 0x00
+Byte:21: 0x00
+
+Height in pixels:
+Byte:22: 0x02
+Byte:23: 0x00
+Byte:24: 0x00
+Byte:25: 0x00
+
+Number of color planes:
+Byte:26: 0x01
+Byte:27: 0x00
+
+Bits per pixel:
+Byte:28: 0x18
+Byte:29: 0x00
+
+Compression method:
+Byte:30: 0x00
+Byte:31: 0x00
+Byte:32: 0x00
+Byte:33: 0x00
+
+Image size:
+Byte:34: 0x10
+Byte:35: 0x00
+Byte:36: 0x00
+Byte:37: 0x00
+
+Horizontal resolution. Pixel per metre, signed integer:
+Byte:38: 0xC4
+Byte:39: 0x0E
+Byte:40: 0x00
+Byte:41: 0x00
+
+Vertical resolution of the image. Pixel per metre, signed integer:
+Byte:42: 0xC4
+Byte:43: 0x0E
+Byte:44: 0x00
+Byte:45: 0x00
+
+Number of colors in the color palette:
+Byte:46: 0x00
+Byte:47: 0x00
+Byte:48: 0x00
+Byte:49: 0x00
+
+Number of important colors used, or 0 when every color is important:
+Byte:50: 0x00
+Byte:51: 0x00
+Byte:52: 0x00
+Byte:53: 0x00
+
+Start of Image:
+Byte:54: 0xFD
+Byte:55: 0xFD
+Byte:56: 0xFD
+
+Byte:57: 0x00
+Byte:58: 0x00
+Byte:59: 0x00
+
+//padding
+Byte:60: 0x00
+Byte:61: 0x00
+
+Byte:62: 0x00
+Byte:63: 0x00
+Byte:64: 0x00
+
+Byte:65: 0xFE
+Byte:66: 0xFE
+Byte:67: 0xFE
+
+//padding
+Byte:68: 0x00
+Byte:69: 0x00
